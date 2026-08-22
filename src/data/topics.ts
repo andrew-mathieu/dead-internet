@@ -1,0 +1,15 @@
+export const topics = [
+  "gaming",
+  "music",
+  "anime",
+  "photography",
+  "programming",
+  "metal",
+  "paranormal",
+  "memes",
+  "movies",
+  "technology",
+  "art",
+  "conspiracy",
+  "politics",
+];

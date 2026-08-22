@@ -6,9 +6,9 @@ const seed = 12345;
 
 setSeed(seed);
 
-const world = generateWorld(seed, 10, 5);
+const world = generateWorld(seed, 10);
 
-for (let i = 0; i < 15; i++) {
+for (let i = 0; i < 5; i++) {
   simulateYear(world);
 }
 
@@ -21,33 +21,6 @@ for (const user of world.users) {
     ),
   );
 }
-
-console.table(
-  world.users.map((user) => ({
-    username: user.username,
-    age: world.year - user.birthYear,
-    archetype: user.archetype,
-    interests: user.interests,
-    joinedAt: user.joinedAt,
-    activity: user.activity.toFixed(2),
-    siteIds: user.siteIds,
-  })),
-);
-console.table(world.sites);
-console.table(world.events);
-
-console.table(
-  world.relationships.map((relationship) => ({
-    type: relationship.type,
-    strength: relationship.strength.toFixed(2),
-    createdAt: relationship.createdAt,
-
-    userA: world.users.find((user) => user.id === relationship.userA)?.username,
-
-    userB: world.users.find((user) => user.id === relationship.userB)?.username,
-  })),
-);
-
 console.table(
   world.events.map((event) => ({
     year: event.year,
@@ -55,12 +28,13 @@ console.table(
 
     user: world.users.find((user) => user.id === event.userId)?.username,
 
-    target: event.targetUserId
-      ? world.users.find((user) => user.id === event.targetUserId)?.username
-      : "",
+    site: world.sites.find((site) => site.id === event.siteId)?.name,
 
-    site: event.siteId
-      ? world.sites.find((site) => site.id === event.siteId)?.name
-      : "",
+    topic: event.topic,
+
+    target: world.users.find((user) => user.id === event.targetUserId)
+      ?.username,
+
+    content: event.content,
   })),
 );

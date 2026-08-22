@@ -4,7 +4,13 @@ export type Event = {
   id: string;
   type: EventType;
   year: number;
+
   userId: string;
-  targetUserId?: string;
+
   siteId?: string;
+  targetEventId?: string;
+  targetUserId?: string;
+
+  topic?: string;
+  content?: string;
 };
