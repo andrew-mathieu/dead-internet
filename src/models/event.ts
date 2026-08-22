@@ -6,4 +6,5 @@ export type Event = {
   year: number;
   userId: string;
   targetUserId?: string;
+  siteId?: string;
 };

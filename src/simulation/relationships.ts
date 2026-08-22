@@ -21,6 +21,14 @@ export function simulateRelationships(world: World): void {
         continue;
       }
 
+      const shareSite = userA.siteIds.some((siteId) =>
+        userB.siteIds.includes(siteId),
+      );
+
+      if (!shareSite) {
+        continue;
+      }
+
       if (random() > 0.1) {
         continue;
       }
@@ -36,5 +44,27 @@ export function simulateRelationships(world: World): void {
 
       world.relationships.push(relationship);
     }
+  }
+}
+
+export function strengthenRelationship(
+  world: World,
+  userA: string,
+  userB: string,
+): void {
+  const relationship = world.relationships.find(
+    (relationship) =>
+      (relationship.userA === userA && relationship.userB === userB) ||
+      (relationship.userA === userB && relationship.userB === userA),
+  );
+
+  if (!relationship) {
+    return;
+  }
+
+  relationship.strength = Math.min(1, relationship.strength + 0.1);
+
+  if (relationship.strength >= 0.6 && relationship.type === "acquaintance") {
+    relationship.type = "friendship";
   }
 }
