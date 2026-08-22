@@ -22,6 +22,11 @@
   "homepage": "https://github.com/andrew-mathieu/dead-internet#readme",
   "devDependencies": {
     "@types/node": "^26.2.0",
+    "@types/seedrandom": "^3.0.8",
+    "tsx": "^4.23.12",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "seedrandom": "^3.0.5"
   }
 }

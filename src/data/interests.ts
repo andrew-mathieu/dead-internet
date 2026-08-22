@@ -1,0 +1,12 @@
+export const interests = [
+  "gaming",
+  "music",
+  "anime",
+  "photography",
+  "programming",
+  "metal",
+  "paranormal",
+  "memes",
+  "movies",
+  "technology",
+];
