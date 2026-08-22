@@ -6,7 +6,27 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "paths": {
+      "#models/*": [
+        "./src/models/*"
+      ],
+      "#generators/*": [
+        "./src/generators/*"
+      ],
+      "#core/*": [
+        "./src/core/*"
+      ],
+      "#data/*": [
+        "./src/data/*"
+      ],
+      "#utils/*": [
+        "./src/utils/*"
+      ],
+      "#simulation/*": [
+        "./src/simulation/*"
+      ]
+    }
   },
   "include": [
     "src"

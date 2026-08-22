@@ -9,4 +9,7 @@ export const interests = [
   "memes",
   "movies",
   "technology",
+  "art",
+  "conspiracy",
+  "politics",
 ];
