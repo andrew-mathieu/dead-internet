@@ -34,7 +34,6 @@
     "#generators/*": "./src/generators/*.ts",
     "#core/*": "./src/core/*.ts",
     "#data/*": "./src/data/*.ts",
-    "#utils/*": "./src/utils/*.ts",
     "#simulation/*": "./src/simulation/*.ts"
   }
 }

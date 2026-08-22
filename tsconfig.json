@@ -21,9 +21,6 @@
       "#data/*": [
         "./src/data/*"
       ],
-      "#utils/*": [
-        "./src/utils/*"
-      ],
       "#simulation/*": [
         "./src/simulation/*"
       ]
